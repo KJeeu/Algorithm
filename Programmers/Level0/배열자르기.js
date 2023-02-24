@@ -5,3 +5,11 @@ function solution(numbers, num1, num2) {
     }
     return answer;
 }
+
+/*
+배열의 slice 함수 이용
+
+function solution(numbers, num1, num2) {
+    return numbers.slice(num1, num2 + 1);
+}
+*/
