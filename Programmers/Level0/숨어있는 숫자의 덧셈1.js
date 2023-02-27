@@ -1,0 +1,1 @@
+const solution = my_string => [...my_string].filter(x => !isNaN(x)).reduce((a, b) => a + Number(b), 0);
