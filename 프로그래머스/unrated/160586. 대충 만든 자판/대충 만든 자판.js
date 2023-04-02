@@ -13,13 +13,9 @@ function solution(keymap, targets) {
                     num.push(keymap[k].indexOf(alpha) + 1);
                 }
         }
-            if(num.length === 0) {
-                sum = 0;
-                break;
-            }
-            else sum += Math.min(...num);
+            sum += Math.min(...num);
         }
-        if(sum === 0) sum = -1;
+        if(sum === Infinity) sum = -1;
         answer.push(sum);
 
     }
