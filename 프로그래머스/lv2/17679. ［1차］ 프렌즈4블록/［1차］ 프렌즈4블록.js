@@ -23,10 +23,9 @@ function solution(m, n, board) {
     
     //재정렬
     for (let i = m - 1; i > 0; i--){
-        if(!board[i].some(x => !x)) continue;
-        
         for(let j = 0; j < n; j++){
-            for(let k = i - 1; k >= 0 && ! board[i][j]; k--){
+            if(board[i][j]) continue;
+            for(let k = i - 1; k >= 0; k--){
                 if(board[k][j]) {
                     board[i][j] = board[k][j];
                     board[k][j] = 0;
